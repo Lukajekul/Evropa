@@ -1,0 +1,925 @@
+/* Pisava iz Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;700&family=Playfair+Display:wght@400;700&display=swap');
+
+
+
+body {
+  margin: 0;
+}
+
+header {
+  background-color: #1c1f26;
+  padding: 20px 40px;
+  color: white;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-naslov {
+  display: flex;
+  align-items: center; /* Vertical alignment */
+  gap: 15px; /* Space between image and text */
+}
+
+/* Logo z zanimivo pisavo */
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0; /* Remove default margins */
+}
+
+
+/* Navigacija */
+#meni > ul {
+  list-style: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+#meni ul li {
+  list-style: none;
+  position: relative;
+  text-align: center;
+}
+
+#meni ul li a {
+  list-style: none;
+  text-decoration: none;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+
+}
+
+.logo-slika {
+  width: 60px; /* Fixed width instead of percentage */
+  height: auto; /* Maintain aspect ratio */
+}
+
+
+/* Podmeni (dropdown) */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+#meni .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  text-decoration: none;
+  background-color: #2c2f36;
+  padding: 10px 0;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  flex-direction: column;
+  min-width: 180px;
+  z-index: 10000;
+}
+
+/* FIXED RULE */
+#meni .dropdown:hover .dropdown-menu {
+  display: flex;
+}
+
+li.active a {
+  background-color: #2c2f36;
+}
+
+
+.dropdown-style {
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.dropdown-style:hover {
+    color: aqua;
+    background-color: #3a3f47;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#footer {
+  background-color: #1f1f1f;
+  color: #e0e0e0;
+  padding: 40px 20px 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
+}
+
+.footer-column {
+  flex: 1 1 250px;
+  min-width: 250px;
+}
+
+.footer-column h3,
+.footer-column h4 {
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.footer-column p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #cccccc;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #444;
+  padding-top: 15px;
+  margin-top: 30px;
+  font-size: 13px;
+  color: #999;
+}
+
+
+#galerija {
+  padding: 0 10%;
+  box-sizing: border-box;
+}
+
+#list-galerija {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+#list-galerija li {
+  background-color: #999;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+#list-galerija li img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.undertext {
+  background-color: #999999ec;
+  padding: 10px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+
+.gallery-section {
+  background-image: url("../slike/backgroun.png");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.galery-animation {
+  text-decoration: none;
+}
+
+.galery-animation:hover {
+  transform: translateY(-8px);
+  box-shadow: 
+    0 0 0 2px rgba(255, 215, 0, 0.4),
+    0 10px 30px -10px rgba(231, 76, 60, 0.3);
+  position: relative;
+  z-index: 10;
+}
+
+.galery-animation:hover::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(255,107,107,0.15) 0%, rgba(255,230,109,0.15) 100%);
+  z-index: 1;
+  animation: gradientPulse 4s infinite alternate;
+}
+
+
+.galery-animation:hover img {
+  transform: scale(1.05);
+  filter: saturate(1.2);
+}
+
+.galery-animation:hover .undertext h4 {
+  color: #e84393;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  letter-spacing: 0.5px;
+}
+
+.galery-animation:hover .undertext {
+  background: linear-gradient(to right, #fff, #fce4ec);
+}
+
+
+@keyframes gradientPulse {
+  0% { opacity: 0.7; }
+  100% { opacity: 0.9; }
+}
+
+
+.galery-animation {
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.galery-animation img,
+.galery-animation .undertext h4,
+.galery-animation .undertext {
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+#slikovna-sekcija {
+  padding: 5% 10%;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.slikovni-blok {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.slikovni-blok img {
+  width: 45%;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.slikovni-blok .opis {
+  flex: 1;
+  color: #333;
+}
+
+.slikovni-blok .opis h3 {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+
+.slikovni-blok .opis p {
+  font-size: 1em;
+  line-height: 1.6;
+}
+
+/* Levi blok = slika levo, besedilo desno */
+.slikovni-blok.leva {
+  flex-direction: row;
+}
+
+/* Desni blok = besedilo levo, slika desno */
+.slikovni-blok.desna {
+  flex-direction: row-reverse;
+}
+
+.olive-background {
+  background-color: #959C70;
+}
+
+.text-back {
+  background-color: #A8B591;
+  border-radius: 10px;
+  padding: .5%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.img-border {
+  background: linear-gradient(270deg, #FFD700, #D4AF37);
+  padding: 5px;
+  border-radius: 12px;
+  display: inline-block;
+  width: 300px; /* optional */
+  height: auto;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.image-wrapper,
+.text-wrapper {
+  flex: 1;
+  transition: transform 0.5s ease;
+}
+
+/* Optional: Maintain original proportions */
+.image-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Rotate on hover */
+.main-container:hover .image-wrapper {
+  transform: rotate(-5deg);
+}
+
+.main-container:hover .text-wrapper {
+  transform: rotate(5deg);
+}
+
+/* animacija na indexu  */
+
+.card {
+    position: relative;
+    cursor: pointer;
+    width: 350px; /* Increased size */
+    height: 250px; /* Increased size */
+    perspective: 1000px; /* For better 3D effect */
+}
+
+.face1 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent; /* Changed from #333 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease;
+    z-index: 2;
+    transform: translateY();
+}
+
+.card:hover .face1 {
+    transform: translateY(-50%); /* Image moves up 30% */
+}
+
+.imgbox {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    opacity: 1; /* Changed from 0.2 */
+    transition: opacity 0.3s;
+}
+
+.face1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image covers the area */
+}
+
+.card-name {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
+    padding: 15px 0;
+    color: white;
+    text-align: center;
+    font-size: 25px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.7));
+}
+
+.face2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #A8B591;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 30px;
+    transition: transform 0.5s ease;
+    transform: translateY(0); /* Start position */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.card:hover .face2 {
+    transform: translateY(30%); /* Text moves up to center */
+}
+
+.content {
+    width: 100%;
+    text-align: center;
+    color: #FFD700;
+}
+
+.video-container {
+    width: 100%;
+    height: 500px; /* Nastavi željeno višino */
+    overflow: hidden;
+    position: relative;
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Dodaten stil za boljši prikaz */
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3); /* Prosojna črna prekrivna plast */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2rem;
+}
+
+.index-first {
+  padding-top: 5%;
+  padding-left: 10.5%;
+  font-size: 3.4em;
+  font-weight: bold;
+}
+
+.split {
+  border: #1c1f26 .1em solid;
+  max-width: 79%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+.opis-index {
+  font-family: Arial, Helvetica, sans-serif;
+  display: block;
+  margin: auto;
+  max-width: 79%;
+  font-size: 2em;
+  padding-top: 3%;
+  text-align: justify;
+  font-family: 'EB Garamond';
+}
+
+.funny {
+  font-family: cursive;
+  font-style: italic;
+}
+
+
+.custom-svg-list {
+  list-style: none;
+  padding-left: 1.5em;
+  padding-left: 8%;
+}
+
+.custom-svg-list li {
+  position: relative;
+  margin-bottom: 0.5em;
+}
+
+.custom-svg-list li::before {
+  content: "";
+  position: absolute;
+  left: -1.5em;
+  top: 0.25em;
+  width: 1em;
+  height: 1em;
+  background-image: url('../svg/ol_list.svg');
+  background-size: contain;
+
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.grid-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Key change here */
+  gap: 25px;
+  width: 100%;
+  max-width: 79%;
+}
+
+.box {
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  max-width: 100%; /* Ensures box never exceeds column width */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  overflow: hidden; /* Keeps content contained */
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .grid-row {
+      gap: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .grid-row {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
+
+
+  /* Main accordion container */
+.accordion {
+    max-width: 79%;
+    margin: auto;
+    border: 1px solid #e0e0e0;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+/* Header section - now acts as the button */
+.accordion-header {
+    display: flex;
+    align-items: center;
+    padding: 16px 20px;
+    cursor: pointer;
+    background-color: #A8B591;
+    transition: background-color 0.2s ease;
+    width: 100%;
+    border: none;
+    text-align: left;
+}
+
+/* Hover effect for header */
+.accordion-header:hover {
+    background-color: #bbc9a1;
+}
+
+/* The arrow icon from your SVG file */
+.accordion-arrow {
+    width: 18px;
+    height: 18px;
+    transition: transform 0.3s ease;
+    margin-right: 12px;
+    flex-shrink: 0;
+}
+
+/* Title text styling */
+.accordion-title {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #333;
+}
+
+/* Content section that expands/collapses */
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background-color: #bbc9a1;
+}
+
+/* Inner padding for the content */
+.accordion-content-inner {
+    padding: 0 20px;
+}
+
+/* Expanded state */
+.accordion.active .accordion-arrow {
+    transform: rotate(90deg);
+}
+
+.accordion.active .accordion-content {
+    max-height: 500px; /* Adjust based on your content */
+    padding: 16px 0;
+}
+
+/* Content styling */
+.accordion-content p {
+    margin: 0 0 12px 0;
+    color: #555;
+    line-height: 1.5;
+}
+
+.accordion-content p:last-child {
+    margin-bottom: 0;
+}
+
+.full-dropdown {
+  padding-top: 3%;
+  padding-bottom: 5%;
+}
+
+
+
+.museum-page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    font-family: sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+/* Form Section */
+.museum-form-section {
+    flex: 1;
+    min-width: 300px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+/* Map Section */
+.museum-map-section {
+    flex: 1;
+    min-width: 300px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+.museum-map-section h2 {
+    color: olive;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+.museum-map-container {
+    width: 100%;
+    height: 450px;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.museum-map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Form Styling */
+.museum-fieldset {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 25px;
+    margin: 0;
+}
+
+.museum-legend {
+    font-size: 1.2em;
+    font-weight: 700;
+    padding: 0 15px;
+    margin-left: -15px;
+    color: olive;
+}
+
+.museum-form-field {
+    margin-bottom: 20px;
+}
+
+.museum-form-label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+}
+
+.museum-form-input,
+.museum-form-textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-size: 15px;
+}
+
+.museum-form-textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.museum-radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 8px;
+}
+
+.museum-radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+/* CAPTCHA Styling */
+.museum-captcha-wrapper {
+    margin: 30px 0;
+    padding: 15px 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+/* Submit Button */
+.museum-form-submit {
+    width: 100%;
+    padding: 14px;
+    background-color: olive;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+}
+
+.museum-form-submit:hover {
+    background-color: #6b6b00;
+}
+
+.museum-map-section {
+  display: block;
+  margin: auto;
+  max-width: 60%;
+  margin-top: 4%;
+}
+
+.museum-form-section {
+  margin-top: 4%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .museum-page-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .museum-form-section,
+    .museum-map-section {
+        padding: 25px 20px;
+    }
+    
+    .museum-fieldset {
+        padding: 20px 15px;
+    }
+    
+    .museum-map-container {
+        height: 350px;
+    }
+}
+
+@media (max-width: 480px) {
+    .museum-radio-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .museum-map-container {
+        height: 300px;
+    }
+}
+
+.museum-page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+/* About Section */
+.museum-about-section {
+  margin-top: 4%;
+  margin-bottom: 4%;
+  background-color: white;
+  padding: 40px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.museum-about-section h1 {
+  color: olive;
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  text-align: center;
+  border-bottom: 2px solid olive;
+  padding-bottom: 15px;
+}
+
+.museum-about-section h2 {
+    color: olive;
+    font-size: 1.8em;
+    margin: 30px 0 20px;
+}
+
+.museum-history p {
+    line-height: 1.8;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* Complex Tables */
+.museum-complex-table,
+.museum-hours-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.museum-complex-table caption,
+.museum-hours-table caption {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: olive;
+}
+
+.museum-complex-table th,
+.museum-complex-table td,
+.museum-hours-table th,
+.museum-hours-table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.museum-complex-table thead tr,
+.museum-hours-table thead tr {
+    background-color: olive;
+    color: white;
+}
+
+.museum-complex-table tbody tr:nth-of-type(even),
+.museum-hours-table tbody tr:nth-of-type(even) {
+    background-color: #f9f9f9;
+}
+
+.museum-complex-table tbody tr:hover,
+.museum-hours-table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.museum-complex-table tfoot tr,
+.museum-hours-table tfoot tr {
+    font-weight: bold;
+    background-color: #f5f5f5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .museum-about-section {
+        padding: 25px 15px;
+    }
+    
+    .museum-complex-table,
+    .museum-hours-table {
+        display: block;
+        overflow-x: auto;
+    }
+    
+    .museum-about-section h1 {
+        font-size: 2em;
+    }
+    
+    .museum-about-section h2 {
+        font-size: 1.5em;
+    }
+}

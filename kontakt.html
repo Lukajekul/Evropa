@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Spletna stran muzeja Evropa Včasih">
+    <meta name="author" content="Žan Luka">
+    <meta name="keywords" content="Heritage, Civilizations, Empires, Revolutions, Monarchies, Renaissance, Legacy, War & Peace, Artifacts, Traditions, Age of Discovery, Cultural Roots, Chronicles, Enlightenment, Continental Journey">
+    <meta name="description" content="Muzej evropske zgodovine prikazuje bogato dediščino celine. Razstave zajemajo obdobja od antike do sodobnosti.">
+    <title>Kontakt</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="icon" type="image/x-icon" href="slike/logo.png">
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+</head>
+<body>
+<header>
+  <div class="header-container">
+
+    <div class="logo-naslov">
+      <img class="logo-slika" src="slike/logo.png">
+      <div class="logo">Evropa Včasih</div>
+    </div>
+
+
+    <nav id="meni">
+      <ul>
+        <li><a href="index.html">Domov</a></li>
+        <li><a href="o_muzeju.html">O Muzeju</a></li>
+            <li class="dropdown">
+            <a class="dropdown-toggle">Razstave ▾</a>
+            <ul class="dropdown-menu">
+                <li class="dropdown-style"><a href="HTML/opisi/cerkev.html">Cerkve</a></li>
+                <li class="dropdown-style"><a href="HTML/opisi/gradovi.html">Gradovi</a></li>
+                <li class="dropdown-style"><a href="HTML/opisi/oklepi.html">Oklepi</a></li>
+                <li class="dropdown-style"><a href="HTML/opisi/orozje.html">Orožje</a></li>
+                <li class="dropdown-style"><a href="HTML/opisi/umetnost.html">Umetnost</a></li>
+                <li class="dropdown-style"><a href="HTML/opisi/vitezi.html">Vitezi</a></li>
+                <li class="dropdown-style"><a href="HTML/opisi/vsakdanje_zivljenje.html">Življenje</a></li>
+            </ul>
+            </li>
+        <li><a href="slikovna_galerija.html">Galerija</a></li>
+        <li class="active"><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+
+<section class="olive-background">
+<div class="museum-page-container">
+    <div class="museum-form-section">
+        <form class="museum-contact-form" onsubmit="return false;">
+            <fieldset class="museum-fieldset">
+                <legend class="museum-legend">Kontaktni obrazec</legend>
+                
+                <div class="museum-form-field">
+                    <label for="museum-contact-name" class="museum-form-label">Ime</label>
+                    <input type="text" id="museum-contact-name" name="name" class="museum-form-input" placeholder="Ime in priimek" required>
+                </div>
+                
+                <div class="museum-form-field">
+                    <label for="museum-contact-email" class="museum-form-label">e-Poštni naslov</label>
+                    <input type="email" id="museum-contact-email" name="email" class="museum-form-input" placeholder="marko.tušek@gmail.com" required>
+                </div>
+                
+                <div class="museum-form-field">
+                    <label for="museum-contact-phone" class="museum-form-label">Telefonska številka</label>
+                    <input type="tel" id="museum-contact-phone" name="phone" class="museum-form-input" placeholder="+386 (40) 456 789">
+                </div>
+                
+                <div class="museum-form-field">
+                    <label for="museum-contact-message" class="museum-form-label">Vaše sporočilo</label>
+                    <textarea id="museum-contact-message" name="message" class="museum-form-textarea" placeholder="Vnesite sporočilo tukaj" required></textarea>
+                </div>
+                
+                <div class="museum-form-field">
+                    <label class="museum-form-label">Namen obiska</label>
+                    <div class="museum-radio-group">
+                        <label>
+                            <input type="radio" name="visit_purpose" value="general" checked> Splošno obiskovanje
+                        </label>
+                        <label>
+                            <input type="radio" name="visit_purpose" value="education"> Šolski obisk
+                        </label>
+                        <label>
+                            <input type="radio" name="visit_purpose" value="research"> Raziskovalno delo
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="museum-captcha-wrapper">
+                    <div class="cf-turnstile" data-sitekey="0x4AAAAAABgHLzjn1pY8a548"></div>
+                </div>
+                
+                <input type="submit" class="museum-form-submit" value="Pošlji sporočilo" onclick="this.form.reset(); return false;">
+            </fieldset>
+        </form>
+    </div>
+</div>
+
+        <div class="museum-map-section">
+            <h2>Lokacija muzeja</h2>
+            <div class="museum-map-container">
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2726.2121088605627!2d14.509132776254681!3d46.04141557108924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47652d6161e4e7ef%3A0x846891bae0b4fd34!2sIn%C5%A1titut%20za%20novej%C5%A1o%20zgodovino!5e1!3m2!1ssl!2ssi!4v1748773428840!5m2!1ssl!2ssi" 
+                  width="600" 
+                  height="450" 
+                  style="border:0;" 
+                  allowfullscreen="" 
+                  loading="lazy" 
+                  referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+<footer id="footer">
+  <div class="footer-container">
+    <div class="footer-column">
+      <h3>Evropa včasih – Muzejski projekt</h3>
+      <p>
+        Interaktivni zgodovinski arhiv evropske dediščine, posvečen prikazu kulture, umetnosti in družbe nekoč.
+      </p>
+    </div>
+
+    <div class="footer-column">
+      <h4>Kontakt</h4>
+      <p>Trg Zgodovine 1<br>1000 Ljubljana, Slovenija</p>
+      <p>Telefon: +386 1 234 56 78<br>Email: info@evropavcasih.si</p>
+    </div>
+
+    <div class="footer-column">
+      <h4>Obisk muzeja</h4>
+      <p>Ponedeljek–Petek: 9:00–18:00<br>Sobota–Nedelja: 10:00–16:00</p>
+      <p>Zaprto ob praznikih</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 Evropa včasih – Vse pravice pridržane</p>
+  </div>
+</footer>
+
+
+</body>
+</html>
